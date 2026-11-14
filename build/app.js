@@ -107,7 +107,7 @@ function render(){
       tail.parentNode.insertBefore(fr,tail);
       var cols=fr.querySelectorAll('.col.pm');
       for(var k=0;k<2;k++){var b2=s*2+k;if(b2>=nb)continue;var bk2=BANKS[b2];
-        for(var half=0;half<2;half++){var html=half===0?('<div class="sh"><span class="sn" style="background:'+bk2[1]+';color:#1F1B19">'+(b2+1)+'</span><h2 class="st">'+bk2[0]+' bank</h2><span class="sc">'+bk2[2]+'</span></div>'):('<div class="sh"><span class="sn" style="background:'+bk2[1]+';color:#1F1B19">'+(b2+1)+'</span><h2 class="st">'+bk2[0]+' bank · 5–8</h2><span class="sc">continued</span></div>');
+        for(var half=0;half<2;half++){var html=half===0?('<div class="sh"><span class="sn" style="background:'+bk2[1]+';color:#1F1B19">'+(b2+1)+'</span><h2 class="st">'+bk2[0]+' bank · 1–4</h2><span class="sc">'+bk2[2]+'</span></div>'):('<div class="sh"><span class="sn" style="background:'+bk2[1]+';color:#1F1B19">'+(b2+1)+'</span><h2 class="st">'+bk2[0]+' bank · 5–8</h2><span class="sc">continued</span></div>');
           for(var j2=half*4;j2<half*4+4;j2++)html+=card(b2*8+j2,j2,bk2);
           cols[k*2+half].innerHTML='<div class="zc"><section class="sec">'+html+'</section></div>';}}
       fr.querySelector('.col.px').innerHTML='<div class="zc">'+(s===0?chordsHtml()+twistHtml():fmHtml(true))+'</div>';

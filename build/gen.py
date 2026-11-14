@@ -26,6 +26,8 @@ CSS = '''
 .pp-status{font-family:'Roboto Mono',monospace;font-size:11px;line-height:1.5;color:var(--c1F1B18);margin:8px 0 0;min-height:17px}
 .pp-status.bad{color:var(--cE2622B);font-weight:600}
 .pp-drop{border:2px dashed var(--c1F1B18);padding:14px 14px 12px;margin:8px 0 0;display:flex;flex-direction:column;gap:8px;align-items:flex-start}
+.pp-inst{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);column-gap:32px;align-items:start}
+@media screen and (max-width: 899px){.pp-inst{grid-template-columns:minmax(0,1fr)}}
 .pp-drop.over{background:var(--cEAE2D3)}
 .pp-btn{font-family:'Roboto Mono',monospace;font-weight:600;font-size:11.5px;color:var(--c1F1B18);background:var(--cF3EDE2);border:1.5px solid var(--c1F1B18);padding:7px 10px;cursor:pointer;min-height:34px}
 .pp-btn.go{background:var(--c1F1B18);color:var(--cF3EDE2)}
@@ -187,6 +189,27 @@ COL23 = f'''<div class="col" style="align-self: stretch; grid-column: span 2">
 <section class="sec">
 <div class="sh"><span class="sn" style="background: #4F9B6A; color: #1F1B19">02</span><h2 class="st">voice index</h2><span class="sc">plp_02 · bank · slot · LED</span></div>
 <div class="bks" id="pp-index"></div>
+</section>
+<section class="sec">
+<div class="sh"><span class="sn" style="background: #DD6E37; color: #1F1B19">04</span><h2 class="st">install the firmware</h2><span class="sc">plp_04 · audio update</span></div>
+<div class="pp-inst">
+<div>
+<div class="r"><div class="kc"><span class="v">before 1</span></div><div class="a">unplug every cable from the module</div></div>
+<div class="r"><div class="kc"><span class="v">before 2</span></div><div class="a">patch your computer or audio interface output into the <span class="b">model</span> input</div></div>
+<div class="r"><div class="kc"><span class="v">before 3</span></div><div class="a">set <span class="b">frequency</span> to 12 o’clock</div></div>
+<div class="r"><div class="kc"><span class="v">before 4</span></div><div class="a">silence notifications and anything else the computer might play. disconnect speakers and headphones: the update audio is loud</div></div>
+<div class="r"><div class="kc"><span class="v">before 5</span></div><div class="a">no equalizer, automatic gain or other effect between the file and the module</div></div>
+</div>
+<div>
+<div class="r"><div class="kc"><span class="v">step 1</span></div><div class="a">hold {b('left')} while you power on the system</div></div>
+<div class="r"><div class="kc"><span class="v">step 2</span></div><div class="a">play the firmware <b>.wav</b> from start to finish</div></div>
+<div class="r"><div class="kc"><span class="v">LEDs 1–4</span></div><div class="a">level meter. two or three lit is right. turn <span class="b">frequency</span> to change the input gain</div></div>
+<div class="r"><div class="kc"><span class="v">LEDs 5–8</span></div><div class="a">progress of the packet being received</div></div>
+<div class="r"><div class="kc"><span class="v">step 3</span></div><div class="a">when the file ends the module restarts on its own. if it doesn’t, start over</div></div>
+<div class="r"><div class="kc"><span class="v">all LEDs blink red</span></div><div class="a">the level is off. press {b('left')} and play the file again with more gain. a computer’s line output may need full volume. still failing: try another computer or interface</div></div>
+</div>
+</div>
+<p class="note">procedure from the mutable instruments plaits manual · the palette .wav installs the same way</p>
 </section>
 </div>'''
 COL4 = f'''<div class="col" style="align-self: stretch">
